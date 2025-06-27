@@ -12,6 +12,4 @@ describe('Product', () => {
     expect(sut).toHaveProperty('name', 'Camiseta');
     expect(sut.price).toBeCloseTo(59.9);
   });
-
-
 });
