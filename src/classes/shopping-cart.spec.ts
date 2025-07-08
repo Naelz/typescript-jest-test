@@ -53,4 +53,13 @@ describe('Shopping Cart', () => {
     expect(sut.items.length).toBe(0);
     expect(sut.isEmpty()).toBe(true);
   })
+
+  it('should remove products', () => {
+    const { sut } = createSutWithProducts();
+    expect(sut.items.length).toBe(2);
+    sut.removeItem(1);
+    expect(sut.items.length).toBe(1);
+    sut.removeItem(0);
+    expect(sut.isEmpty()).toBe(true);
+  })
 });
